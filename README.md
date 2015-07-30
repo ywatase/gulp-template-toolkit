@@ -10,13 +10,13 @@ gulpでttからhtmlを生成するためのモジュール
 * Perl
 	* Template
 
-## INSTALL
+## Install
 
 ```
-npm install https://github.com/ywatase/gulp-template-toolkit/archive/master.tar.gz
+npm install ywatase/gulp-template-toolkit
 ```
 
-## USAGE
+## Usage
 
 ```
 var gulp = require('gulp');
@@ -33,7 +33,7 @@ gulp.task('default', function () {
 });
 ```
 
-## OPTIONS
+## Options
 
 ```
 {
