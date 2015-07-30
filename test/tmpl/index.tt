@@ -1,0 +1,6 @@
+[% title = 'top page' %]
+<div class="hoge">
+<p>hogeクラスの中だよ</p>
+<h1>tmpl/index.tt 日本語ページだよ</h1>
+<p class="fuga">fuga classだよ</p>
+</div>

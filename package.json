@@ -1,0 +1,19 @@
+{
+  "name": "gulp-template-toolkit",
+  "version": "1.0.0",
+  "description": "tt2 converter for gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ywatase/gulp-template-toolkit.git"
+  },
+  "author": "ywatase",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
+  }
+}
