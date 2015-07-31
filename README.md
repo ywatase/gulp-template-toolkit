@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ywatase/gulp-template-toolkit?branch=master)](https://travis-ci.org/ywatase/gulp-template-toolkit)
+[![Build Status](https://travis-ci.org/ywatase/gulp-template-toolkit.svg?branch=master)](https://travis-ci.org/ywatase/gulp-template-toolkit)
 
 gulp-template-toolkit
 ===
