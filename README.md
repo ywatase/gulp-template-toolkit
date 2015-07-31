@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ywatase/gulp-template-toolkit?branch=master)](https://travis-ci.org/ywatase/gulp-template-toolkit)
+
 gulp-template-toolkit
 ===
 
@@ -20,16 +22,16 @@ npm install ywatase/gulp-template-toolkit
 
 ```
 var gulp = require('gulp');
-var filter = require('gul-filter');
+var filter = require('gulp-filter');
 var tt = require('gulp-template-toolkit');
 
 gulp.task('default', function () {
-    return gulp.src('src/tmpl/**/*.tt2')
-	    .pipe(filter(['*', '!**/include/**/*.tt2']
-        .pipe(tt2({
-		    includePath: 'src/tmpl'
-        }))
-        .pipe(gulp.dest('site/'));
+    return gulp.src('sample/tmpl/**/*.tt2')
+	    .pipe(filter(['**', '!**/include/**/*.tt2']))
+      .pipe(tt({
+		    includePath: ['sample/tmpl'],
+      }))
+      .pipe(gulp.dest('sample/site/'));
 });
 ```
 
@@ -52,3 +54,9 @@ gulp.task('default', function () {
 	while_max: integer        // Change '$Template::Directive::WHILE_MAX' default
 }
 ```
+
+## License
+
+© Copyright 2015 Yusuke Watase
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
