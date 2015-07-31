@@ -23,7 +23,7 @@ cpanm -n Template                       # from source
 ## Install
 
 ```
-npm install ywatase/gulp-template-toolkit
+npm install gulp-template-toolkit
 ```
 
 ## Limitation
