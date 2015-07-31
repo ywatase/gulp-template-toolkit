@@ -1,19 +1,23 @@
 {
   "name": "gulp-template-toolkit",
-  "version": "1.0.0",
-  "description": "tt2 converter for gulp",
+  "version": "0.0.1",
+  "description": "template toolkit converter for gulp",
+  "homepage": "https://github.com/ywatase/gulp-template-toolkit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ywatase/gulp-template-toolkit.git"
+  "repository": "ywatase/gulp-template-toolkit",
+  "author": {
+    "name": "ywatase"
   },
-  "author": "ywatase",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "gulp-util": "^3.0.6",
     "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.1",
+    "mocha": "^2.2.5"
   }
 }

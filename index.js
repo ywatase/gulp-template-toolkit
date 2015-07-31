@@ -7,7 +7,7 @@ const PLUGIN_NAME = 'gulp-template-toolkit';
 
 function gulpTemplateToolkit (options) {
   var args, cmd;
-  if (options === null) {
+  if (options === undefined) {
     options = {};
   }
   cmd = 'tpage';
@@ -68,25 +68,18 @@ function gulpTemplateToolkit (options) {
       return cb(null, file);
     }
     if (file.isStream()) {
-      throw new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported');
+      this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));
+      return cb();
     }
 
-    argv = [].concat(args);
-    argv.push(file.path);
-    console.log(cmd + ' ' + argv.join(' '));
+    console.log(cmd + 'v' + args.join(' '));
     file.path = gutil.replaceExtension(file.path, '.html');
 
-    tt = spawn(cmd, argv);
+    tt = spawn(cmd, args);
 
     b = new Buffer(0);
     eb = new Buffer(0);
 
-//    tt.on('exit', function(code) {
-//      if (code !== 0) {
-//        throw new gutil.PluginError(PLUGIN_NAME, 'exit with code ' + code);
-//      }
-//      return cb(null, file);
-//    });
     tt.stdout.on('readable', function() {
       var chunk;
       while (chunk = tt.stdout.read()) {
@@ -109,8 +102,10 @@ function gulpTemplateToolkit (options) {
         return cb(new gutil.PluginError(PLUGIN_NAME, err));
       }
     });
-    return tt.stdin.end();
-
+    stdin = new Buffer(file.contents.toString());
+    return tt.stdin.write(stdin, function() {
+      return tt.stdin.end();
+    });
   });
 }
 

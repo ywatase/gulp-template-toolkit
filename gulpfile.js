@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var tt  = require('./index');
 
 var paths = {
-  tt      :'test/tmpl/**/*.tt',
-  tt_root :'test/tmpl',
-  dest    :'test/site',
+  tt      :'sample/tmpl/**/*.tt2',
+  tt_root :'sample/tmpl',
+  dest    :'sample/site',
 };
 
 gulp.task('tt', function() {
@@ -12,7 +12,7 @@ gulp.task('tt', function() {
   .src(paths.tt)
   .pipe(tt({
     includePath: [paths.tt_root],
-    wrapper: 'include/wrapper.tt'
+    wrapper: 'include/wrapper.tt2'
   }))
   .pipe(gulp.dest(paths.dest));
 });
