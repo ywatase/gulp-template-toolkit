@@ -12,10 +12,17 @@ use `tpage` command of `Template-Toolkit`
 * Perl
 	* Template
 
+```
+sudo apt-get install libtemplate-perl   # for Ubuntu or Debian
+```
+
+```
+cpanm -n Template                       # from source
+```
+
 ## Install
 
 ```
-cpanm -n Template
 npm install ywatase/gulp-template-toolkit
 ```
 
