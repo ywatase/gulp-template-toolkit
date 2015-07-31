@@ -3,11 +3,11 @@
 gulp-template-toolkit
 ===
 
-gulpでttからhtmlを生成するためのモジュール
+gulp plugin for converting from tt file to html.
 
 ## Requirement
 
-`Template-Toolkit`の`tpage`コマンドを使用しています。
+use `tpage` command of `Template-Toolkit`
 
 * Perl
 	* Template
@@ -15,8 +15,13 @@ gulpでttからhtmlを生成するためのモジュール
 ## Install
 
 ```
+cpanm -n Template
 npm install ywatase/gulp-template-toolkit
 ```
+
+## Limitation
+
+not support stream mode.
 
 ## Usage
 
