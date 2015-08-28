@@ -1,6 +1,6 @@
 {
   "name": "gulp-template-toolkit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "template toolkit converter for gulp",
   "homepage": "https://github.com/ywatase/gulp-template-toolkit",
   "main": "index.js",
