@@ -72,7 +72,6 @@ function gulpTemplateToolkit (options) {
       return cb();
     }
 
-    console.log(cmd + 'v' + args.join(' '));
     file.path = gutil.replaceExtension(file.path, '.html');
 
     tt = spawn(cmd, args);
