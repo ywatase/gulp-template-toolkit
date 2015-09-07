@@ -57,6 +57,7 @@ gulp.task('default', function () {
 	trim: false,              // Trim blank lines around template blocks
 	absolute: true,           // Allow ABSOLUTE directories (default: true)
 	relative: true,           // Allow RELATIVE directories (default: true)
+	evalPerl: false,          // Evaluate [% PERL %] ... [% END %] code blocks
 	includePath: [path],      // Add directory to includePath
 	preProcess: [tt_name],    // Process TEMPLATE before each main template
 	postProcess: [tt_name],   // Process TEMPLATE after each main template

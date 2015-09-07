@@ -34,6 +34,9 @@ function gulpTemplateToolkit (options) {
   if (options.relative) {
     args.push('--relative');
   }
+  if (options.evalPerl) {
+    args.push('--eval_perl');
+  }
   if (options.includePath) {
     options.includePath.map(function(key) {
       args.push('--include_path=' + key);
